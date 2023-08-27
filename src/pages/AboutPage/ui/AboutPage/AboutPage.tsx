@@ -1,9 +1,9 @@
 
 const AboutPage = () => {
     return (
-        <div>
+        <main>
             About
-        </div>
+        </main>
     );
 };
 

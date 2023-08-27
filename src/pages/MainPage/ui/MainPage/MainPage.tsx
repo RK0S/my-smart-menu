@@ -1,9 +1,9 @@
 
 const MainPage = () => {
     return (
-        <div>
+        <main>
             Main
-        </div>
+        </main>
     );
 };
 
