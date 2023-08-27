@@ -1,0 +1,16 @@
+@import './reboot';
+@import './variables/global';
+@import './themes/dark';
+@import './themes/light';
+
+.app {
+    font: var(--font-m);
+    color: var(--text-color);
+    background: var(--bg-color);
+
+    height: 100svh;
+}
+
+a {
+    color: var(--text-color);
+}
