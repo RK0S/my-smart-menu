@@ -5,7 +5,7 @@ export interface buildPaths {
     entry: string;
     build: string;
     html: string;
-    env: string;
+    src: string;
 }
 
 export interface buildEnv {

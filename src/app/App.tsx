@@ -1,14 +1,13 @@
 import { Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import { Counter } from './Counter';
+import { AboutPage } from 'pages/AboutPage';
+import { MainPage } from 'pages/MainPage';
+import { useTheme } from 'app/providers/ThemeProvider';
+import { classNames } from 'shared/lib/classNames/classNames';
 import './styles/index.scss';
-import { AboutPage } from './pages/AboutPage/AboutPage.async';
-import { MainPage } from './pages/MainPage/MainPage.async';
-import { useTheme } from './ThemeProvider/useTheme';
-import { classNames } from './lib/classNames/classNames';
 
 export const App = () => {
-    const { theme, toggleTheme} = useTheme();
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <div className={classNames('app', {}, [theme])}>
@@ -21,7 +20,6 @@ export const App = () => {
                     <Route path={'/'} element={<MainPage />} />
                 </Routes>
             </Suspense>
-            <Counter />
         </div>
     );
 };
