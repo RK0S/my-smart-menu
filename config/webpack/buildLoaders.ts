@@ -5,6 +5,17 @@ import { buildCssLoader } from './loaders/buildCssLoader';
 export function buildLoaders({ isDev }: buildOptions): webpack.RuleSetRule[] {
     const cssLoader = buildCssLoader(isDev);
 
+    const babelLoader = {
+        test: /\.(js|ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env']
+            }
+        }
+    };
+
     const imgLoader = {
         test: /\.(jpe?g|png|webp|gif)$/i,
         type: 'asset/resource'
@@ -21,5 +32,5 @@ export function buildLoaders({ isDev }: buildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/
     };
 
-    return [typeScriptLoader, cssLoader, imgLoader, svgLoader];
+    return [babelLoader, typeScriptLoader, cssLoader, imgLoader, svgLoader];
 }
