@@ -5,8 +5,10 @@ import { Layout } from '../ui/Layout';
 
 export const RoutePaths = {
     MAIN: '/',
-    ABOUT: '/about'
-}
+    ABOUT: '/about',
+    ARTICLES: '/articles',
+    PROFILE: '/profile'
+} as const
 
 export const routeConfig = createBrowserRouter([
     {

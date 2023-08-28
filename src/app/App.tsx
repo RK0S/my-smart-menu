@@ -9,7 +9,9 @@ export const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <RouterProvider router={routeConfig} />
+            <div className="container">
+                <RouterProvider router={routeConfig} />
+            </div>
         </div>
     );
 };

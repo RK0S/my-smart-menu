@@ -1,2 +1,2 @@
 export { routeConfig } from './config/routeConfig';
-export type { RoutePaths } from './config/routeConfig';
+export { RoutePaths } from './config/routeConfig';

@@ -7,10 +7,12 @@
     font: var(--font-m);
     color: var(--text-color);
     background: var(--bg-color);
-
-    height: 100svh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 100svh;
 }
 
-a {
-    color: var(--text-color);
+.container {
+    margin: 0 auto;
+    width: 1400px;
 }
