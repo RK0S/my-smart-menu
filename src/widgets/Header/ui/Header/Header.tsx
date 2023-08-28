@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Logo } from 'shared/ui/Logo/Logo';
 import { Avatar } from '../Avatar/Avatar';
 import { Nav } from '../Nav/Nav';
-import { Utils } from '../Utils/Utils';
+import { Switchers } from '../Switchers/Switchers';
 import cls from './Header.module.scss';
 
 
@@ -13,7 +13,7 @@ export const Header = () => {
             <Logo />
             <Nav />
             <div className={cls['right-side']}>
-                <Utils className={cls.utils} />
+                <Switchers className={cls.utils} />
                 <Avatar />
             </div>
         </header>
