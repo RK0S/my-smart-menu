@@ -5,9 +5,7 @@ import { Nav } from '../Nav/Nav';
 import { Switchers } from '../Switchers/Switchers';
 import cls from './Header.module.scss';
 
-
 export const Header = () => {
-
     return (
         <header className={classNames(cls.header, {}, [])}>
             <Logo />
@@ -19,4 +17,3 @@ export const Header = () => {
         </header>
     );
 };
-

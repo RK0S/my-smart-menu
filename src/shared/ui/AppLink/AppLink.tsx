@@ -1,10 +1,9 @@
-import { memo, ReactNode } from 'react';
-import { Link, LinkProps } from 'react-router-dom';
+import { memo, type ReactNode } from 'react';
+import { Link, type LinkProps } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './AppLink.module.scss';
 
 type AppLinkSize = 'small' | 'medium' | 'large';
-
 
 interface AppLinkProps extends LinkProps {
     className?: string;
@@ -18,7 +17,13 @@ export const AppLink = memo((props: AppLinkProps) => {
     const { className, children, to, size = 'medium', lineBottom = false } = props;
 
     return (
-        <Link to={to} className={classNames(cls.appLink, {[cls['line-bottom']]: lineBottom}, [className, cls[size], ])}>
+        <Link
+            to={to}
+            className={classNames(cls.appLink, { [cls['line-bottom']]: lineBottom }, [
+                className,
+                cls[size]
+            ])}
+        >
             {children}
         </Link>
     );

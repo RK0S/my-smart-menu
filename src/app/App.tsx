@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom';
-import { routeConfig } from './providers/Router';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { routeConfig } from './providers/Router';
 import './styles/index.scss';
 
 export const App = () => {

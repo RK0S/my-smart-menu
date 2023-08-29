@@ -11,7 +11,7 @@ export const Logo = memo((props: LogoProps) => {
     const { className } = props;
 
     return (
-        <Link to='/' className={classNames(cls.logo, {}, [className])}>
+        <Link to="/" className={classNames(cls.logo, {}, [className])}>
             MY_SMART_MENU
         </Link>
     );

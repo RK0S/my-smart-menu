@@ -8,7 +8,7 @@ export const RoutePaths = {
     ABOUT: '/about',
     ARTICLES: '/articles',
     PROFILE: '/profile'
-} as const
+} as const;
 
 export const routeConfig = createBrowserRouter([
     {

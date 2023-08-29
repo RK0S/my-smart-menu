@@ -4,7 +4,7 @@ import { Header } from 'widgets/Header';
 
 export const Layout = () => {
     return (
-        <Suspense fallback=''>
+        <Suspense fallback="">
             <Header />
             <Suspense fallback={<div>Loading...</div>}>
                 <Outlet />

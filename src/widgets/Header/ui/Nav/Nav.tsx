@@ -5,21 +5,30 @@ import { useTranslation } from 'react-i18next';
 import cls from './Nav.module.scss';
 
 export const Nav = () => {
-    const { t } = useTranslation()
+    const { t } = useTranslation();
+
     return (
         <nav>
             <ul className={classNames(cls.nav)}>
                 <li>
-                    <AppLink to={RoutePaths.MAIN} size='large' lineBottom={true}>{t('Home')}</AppLink>
+                    <AppLink to={RoutePaths.MAIN} size="large" lineBottom>
+                        {t('Home')}
+                    </AppLink>
                 </li>
                 <li>
-                    <AppLink to={RoutePaths.ARTICLES} size='large' lineBottom={true}>{t('Articles')}</AppLink>
+                    <AppLink to={RoutePaths.ARTICLES} size="large" lineBottom>
+                        {t('Articles')}
+                    </AppLink>
                 </li>
                 <li>
-                    <AppLink to={RoutePaths.ABOUT} size='large' lineBottom={true}>{t('About')}</AppLink>
+                    <AppLink to={RoutePaths.ABOUT} size="large" lineBottom>
+                        {t('About')}
+                    </AppLink>
                 </li>
                 <li>
-                    <AppLink to={RoutePaths.PROFILE} size='large' lineBottom={true}>{t('Profile')}</AppLink>
+                    <AppLink to={RoutePaths.PROFILE} size="large" lineBottom>
+                        {t('Profile')}
+                    </AppLink>
                 </li>
             </ul>
         </nav>
