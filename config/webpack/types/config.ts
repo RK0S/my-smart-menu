@@ -10,6 +10,7 @@ export interface buildPaths {
 export interface buildEnv {
     mode: buildMode;
     port: number;
+    analyze: boolean;
 }
 
 export interface buildOptions {
@@ -17,4 +18,5 @@ export interface buildOptions {
     paths: buildPaths;
     isDev: boolean;
     port: number;
+    analyze: boolean;
 }

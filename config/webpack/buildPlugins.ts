@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import type { buildOptions } from './types/config';
 
 export function buildPlugins(options: buildOptions): webpack.WebpackPluginInstance[] {
@@ -15,6 +16,9 @@ export function buildPlugins(options: buildOptions): webpack.WebpackPluginInstan
         }),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(options.isDev),
+        }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: options.analyze ? 'server' : 'disabled'
         })
     ];
 }

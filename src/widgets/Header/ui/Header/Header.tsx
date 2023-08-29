@@ -8,7 +8,9 @@ import cls from './Header.module.scss';
 export const Header = () => {
     return (
         <header className={classNames(cls.header, {}, [])}>
-            <Logo />
+            <div>
+                <Logo />
+            </div>
             <Nav />
             <div className={cls['right-side']}>
                 <Switchers className={cls.utils} />
