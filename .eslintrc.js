@@ -1,7 +1,8 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
+        jest: true
     },
     extends: [
         'eslint:recommended',
@@ -29,7 +30,7 @@ module.exports = {
     plugins: ['@typescript-eslint', 'react', 'react-hooks'],
     rules: {
         indent: ['error', 4, { SwitchCase: 1 }],
-        'linebreak-style': ['error', 'windows'],
+        'linebreak-style': 'off',
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
@@ -73,7 +74,8 @@ module.exports = {
         'no-undef': 'off',
         'react/button-has-type': 'off',
         'arrow-body-style': 'off',
-        'object-curly-newline': 'off'
+        'object-curly-newline': 'off',
+        'max-len': ['error', { ignoreComments: true, code: 100 }]
     },
     settings: {
         react: {
