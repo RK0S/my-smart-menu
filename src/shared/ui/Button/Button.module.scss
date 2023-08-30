@@ -2,4 +2,35 @@
     background: none;
     border: none;
     padding: 0;
+    font: var(--font-m);
+}
+
+.filled {
+    border-radius: 10px;
+    background: var(--accent-color);
+    box-shadow: 4px 4px 15px 0 var(--light-accent-color);
+    padding: 14px 42px;
+    font-weight: 600;
+    color: #FFFEF5;
+    transition: all 0.5s ease;
+}
+
+.filled:hover {
+    box-shadow: 4px 4px 15px 0 var(--accent-color);
+}
+
+.outlined {
+    border-radius: 10px;
+    padding: 14px 42px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    border: 2px solid var(--accent-color);
+    background: var(--dark-bg-color);
+    color: var(--accent-color);
+}
+
+.outlined:hover {
+    border: 2px solid var(--accent-color);
+    background: var(--accent-color);
+    color: var(--dark-bg-color);
 }
