@@ -1,5 +1,5 @@
 import type { Config } from 'jest';
-// import path from 'path';
+import path from 'path';
 
 const config: Config = {
     // Настройка Jest на Babel
@@ -10,11 +10,11 @@ const config: Config = {
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
     moduleDirectories: ['node_modules'],
     modulePaths: ['<rootDir>src'],
-    // moduleNameMapper: {
-    //     '\\.s?css$': 'identity-obj-proxy',
-    //     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
-    // },
-    // setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    },
+    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
     testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
     rootDir: '../../',
     globals: {

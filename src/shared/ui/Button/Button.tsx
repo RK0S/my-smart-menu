@@ -9,10 +9,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = memo((props: ButtonProps) => {
-    const { className, onClick, children } = props;
+    const { className, onClick, children, ...otherProps } = props;
 
     return (
-        <button onClick={onClick} className={classNames(cls.button, {}, [className])}>
+        <button
+            {...otherProps}
+            onClick={onClick}
+            className={classNames(cls.button, {}, [className])}
+        >
             {children}
         </button>
     );
