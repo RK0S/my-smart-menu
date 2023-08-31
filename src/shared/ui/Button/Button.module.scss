@@ -11,7 +11,7 @@
     box-shadow: 4px 4px 15px 0 var(--light-accent-color);
     padding: 14px 42px;
     font-weight: 600;
-    color: #FFFEF5;
+    color: #fffef5;
     transition: all 0.5s ease;
 }
 
@@ -21,16 +21,16 @@
 
 .outlined {
     border-radius: 10px;
-    padding: 14px 42px;
+    padding: 10px 32px;
     font-weight: 600;
     transition: all 0.5s ease;
     border: 2px solid var(--accent-color);
-    background: var(--dark-bg-color);
+    background: var(--bg-color);
     color: var(--accent-color);
 }
 
 .outlined:hover {
     border: 2px solid var(--accent-color);
     background: var(--accent-color);
-    color: var(--dark-bg-color);
+    color: var(--second-bg-color);
 }
